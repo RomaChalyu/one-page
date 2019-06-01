@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'NunitoSans-Light';
+  src: url("../../fonts/NunitoSans-Light.ttf"); }
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../../fonts/Montserrat-Regular.otf"); }
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("../../fonts/Montserrat-Light.otf"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat-Regular; }
+
+a {
+  text-decoration: none; }
+
+.g-container {
+  max-width: 1170px;
+  width: 100%; }
+
+.butt {
+  position: relative;
+  overflow: hidden;
+  width: 180px; }
+
+.btn {
+  height: 54px;
+  background-color: #10c9c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+  .btn p {
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white; }
+
+.d-none {
+  display: none; }
+
+.pulse {
+  background-color: aqua;
+  border-radius: 50%;
+  animation: pulse 0.7s ease-out;
+  transform: scale(0);
+  position: absolute; }
+
+.Description_Site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .Description_Site h2 {
+    color: #191919;
+    font-family: Montserrat-Regular;
+    font-size: 30px;
+    margin-bottom: 20px; }
+  .Description_Site p {
+    font-family: "Nunito Sans";
+    color: #787878;
+    font-size: 16px;
+    letter-spacing: 0.08px;
+    line-height: 24px;
+    max-width: 620px;
+    margin-bottom: 20px; }
+
+@keyframes pulse {
+  to {
+    transform: scale(2);
+    background-color: #ffffff;
+    opacity: 0; } }
+
+@keyframes image-opacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes popup-menu {
+  0% {
+    top: -500px;
+    opacity: 0; }
+  50% {
+    opacity: 0.1; }
+  100% {
+    top: 0px;
+    opacity: 0.9; } }
+
+@keyframes popup-menu-reverse {
+  0% {
+    top: 0px;
+    opacity: 0.9; }
+  50% {
+    opacity: 0.1; }
+  100% {
+    top: -500px;
+    opacity: 0; } }
+
+@media screen and (max-width: 425px) {
+  .Description_Site h2 {
+    font-size: 25px; }
+  .Description_Site p {
+    width: 80vw;
+    font-size: 16px; }
+  .butt .btn {
+    width: 120px;
+    height: 36px; }
+    .butt .btn p {
+      font-size: 12px; } }
