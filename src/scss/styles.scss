@@ -437,7 +437,7 @@ background: #f5f1f1;
             margin-bottom: 40px;
             
         }
-        p{
+        .form-p{
             padding: 0 10% 30px 10%;
             text-align: center;
             color: #787878;
@@ -466,14 +466,6 @@ background: #f5f1f1;
             margin-bottom: 30px;
             height: 100px;
             padding-top: 15px;
-        }
-        .no-padding{
-            margin: auto;
-            p{
-                font-size: 14px;
-                padding: 0;
-                color: white;
-            }
         }
     }
 }
@@ -539,16 +531,12 @@ footer{
     }
 }
 
-@media screen and (max-width : 425px) {
-
-}
-
 //------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------Media screen width = 768px-----------------------------------------------------------------
 
-@media screen and (max-width : 768px){
+@media screen and (max-width :$for-tablet){
 //------------------------------------------Header---------------------------------------------------------------
     header{
         background-size: initial;
@@ -691,7 +679,7 @@ footer{
                 font-size: 25px;
                 margin-bottom: 15px;
             }
-            p{
+            .form-p{
                 font-size: 12px;
                 padding-bottom: 20px;
             }
@@ -758,7 +746,7 @@ footer{
 //--------------------------------------Media screen width = 425px-----------------------------------------------------------------
 
 
-@media screen and (max-width : 425px){
+@media screen and (max-width : $for-phone){
 //-------------------------------------------------Header---------------------------------------------------------------
     .wrapper {
         margin: 120px 50px;
@@ -772,15 +760,6 @@ footer{
         }
         p{
             font-weight: 600;
-        }
-        .butt{
-            display: flex;
-            justify-content: center;
-            width: 120px;
-            border-radius: 5%;
-            p{
-                font-size: 12px
-            }
         }
     }
     .container{
@@ -892,7 +871,7 @@ footer{
                 font-size: 25px;
                 margin-bottom: 15px;
             }
-            p{
+            .form-p{
                 font-size: 12px;
                 padding-bottom: 20px;
             }
@@ -914,11 +893,6 @@ footer{
             }
             .coment{
                 height: 70px;
-            }
-            .no-padding{
-                p{
-                    font-size: 12px;
-                }
             }
         }
     }
@@ -967,7 +941,7 @@ footer{
 //------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------MEDIA CREEN WIDRT = 375PX----------------------------------
-@media screen and (max-width : 375px) {
+@media screen and (max-width : $for-phone-min) {
 //-------------------------------------------LOGOS-----------------------------------------------------------
     .logos{
         .logos-image{

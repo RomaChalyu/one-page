@@ -27,6 +27,10 @@ a {
   overflow: hidden;
   width: 180px; }
 
+@media screen and (max-width: 425px) {
+  .butt {
+    width: 120px; } }
+
 .btn {
   height: 54px;
   background-color: #10c9c3;
@@ -108,11 +112,16 @@ a {
   .Description_Site p {
     width: 80vw;
     font-size: 16px; }
-  .butt .btn {
+  .butt {
+    display: flex;
+    justify-content: center;
     width: 120px;
-    height: 36px; }
-    .butt .btn p {
-      font-size: 12px; } }
+    border-radius: 5%; }
+    .butt .btn {
+      width: 120px;
+      height: 36px; }
+      .butt .btn p {
+        font-size: 12px; } }
 
 @font-face {
   font-family: 'NunitoSans-Light';
@@ -467,7 +476,7 @@ header {
     .form form h3 {
       font-size: 30px;
       margin-bottom: 40px; }
-    .form form p {
+    .form form .form-p {
       padding: 0 10% 30px 10%;
       text-align: center;
       color: #787878;
@@ -491,12 +500,6 @@ header {
       margin-bottom: 30px;
       height: 100px;
       padding-top: 15px; }
-    .form form .no-padding {
-      margin: auto; }
-      .form form .no-padding p {
-        font-size: 14px;
-        padding: 0;
-        color: white; }
 
 footer {
   background: #141414;
@@ -634,7 +637,7 @@ footer {
     .form form h3 {
       font-size: 25px;
       margin-bottom: 15px; }
-    .form form p {
+    .form form .form-p {
       font-size: 12px;
       padding-bottom: 20px; }
     .form form .form-container {
@@ -681,13 +684,6 @@ footer {
       color: white; }
   .header-title p {
     font-weight: 600; }
-  .header-title .butt {
-    display: flex;
-    justify-content: center;
-    width: 120px;
-    border-radius: 5%; }
-    .header-title .butt p {
-      font-size: 12px; }
   .container .burger i {
     margin-left: 90%; }
   .About_Us .img {
@@ -747,7 +743,7 @@ footer {
     .form form h3 {
       font-size: 25px;
       margin-bottom: 15px; }
-    .form form p {
+    .form form .form-p {
       font-size: 12px;
       padding-bottom: 20px; }
     .form form .form-container {
@@ -764,8 +760,6 @@ footer {
       margin-top: 15px; }
     .form form .coment {
       height: 70px; }
-    .form form .no-padding p {
-      font-size: 12px; }
   footer .footer-container {
     padding: 10px;
     display: flex;

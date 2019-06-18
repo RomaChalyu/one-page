@@ -17,6 +17,13 @@ a{
     overflow: hidden;
    width: 180px;
 }
+
+@media screen and (max-width : $for-phone ){
+    .butt{
+        width: 120px;
+    }
+}
+
 .btn{
     height: 54px;
     background-color: $color-main;
@@ -118,6 +125,10 @@ a{
         }
     }
     .butt{
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        border-radius: 5%;
         .btn{
             width: 120px;
             height: 36px;
