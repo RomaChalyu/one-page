@@ -18,12 +18,6 @@ a{
    width: 180px;
 }
 
-@media screen and (max-width : $for-phone ){
-    .butt{
-        width: 120px;
-    }
-}
-
 .btn{
     height: 54px;
     background-color: $color-main;
@@ -72,7 +66,7 @@ a{
         margin-bottom: 20px;
     }
 }
-
+//---------------------------------------------animations----------------------------------------------------------
 @keyframes pulse {
     to{
         transform: scale(2);
@@ -114,7 +108,8 @@ a{
 }
 
 //-----------------------------------------Media screen-----------------------------------------------------
-@media screen and (max-width : 425px){
+//-----------------------------------------for-phone-----------------------------------------------------
+@media screen and (max-width : $for-phone){
     .Description_Site {
         h2{
             font-size: 25px;

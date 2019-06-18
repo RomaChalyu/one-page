@@ -27,10 +27,6 @@ a {
   overflow: hidden;
   width: 180px; }
 
-@media screen and (max-width: 425px) {
-  .butt {
-    width: 120px; } }
-
 .btn {
   height: 54px;
   background-color: #10c9c3;
