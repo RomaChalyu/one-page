@@ -1,6 +1,7 @@
 @import './global/global.scss';
 @import './variable.scss';
-//-----------------------------------------HEADER----------------------------------------------------------
+//---------------------------------------------HEADER----------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
 header {
     display: flex;
     justify-content: center;
@@ -22,7 +23,7 @@ header {
         font-weight:600;
         font-size: 20px; 
         a{
-            color : black;
+            color : $color-black;
         }
         a:hover {
             color : $color-main;
@@ -62,8 +63,93 @@ margin:180px 100px;
         display: none;
     }
 }
-
-//------------------------------------------SECTION About_Us ----------------------------------------------------
+//---------------------------------------------HEADER  MEDIA SCREEN-----------------------------------------------------------------
+@media screen and (max-width :$for-tablet){
+    header{
+        background-size: initial;
+        padding-bottom: 40px;
+    }
+    .header-menu{
+        top: 0;
+        position: fixed;
+        display: none;
+        width: 100%;
+        z-index: 2;
+        opacity: 0.9;
+        li {
+            display: flex;
+            justify-content: center;
+            background-color: $color-black;
+            margin: -1px;
+            padding: 10px;
+            a {
+            color : #ebebeb;
+            }
+        }
+    }
+    .wrapper {
+        justify-content: center;
+        .header-title{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        .burger{
+            width: 100%;
+            height: 30px;
+            position: fixed;
+            z-index: 3;
+            background: none;
+            margin-bottom: 0;
+            i{
+                display: block;
+                padding-bottom: 0;
+                margin-left: 95%;
+                color : $color-white;
+                font-size: 30px;
+            }
+        }
+    }
+    .container{
+        .burger{
+            background: #141414; 
+            opacity: 0.4;
+        }
+    }
+    .header-menu{
+        .header-li{
+            padding-top: 30px;
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .wrapper {
+        margin: 120px 50px;
+    }
+    .header-title{
+        h1{
+            font-size: 30px;
+            span{
+                color: $color-white;
+            }
+        }
+        p{
+            font-weight: 600;
+        }
+    }
+    .container{
+        .burger{
+            i{
+                margin-left: 90%;
+            }
+        }
+    }
+}
+//------------------------------------------SECTIONAbout_Us------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .About_Us {    
     padding: 50px;
     .img{
@@ -72,8 +158,19 @@ margin:180px 100px;
         background-image: url('../../img/signature.png');
     }
 }
+//-------------------------------------------SECTION ABOUT_US   MEDIA SCREEN-----------------------------------------------------------------
 
+@media screen and (max-width : $for-phone){
+    .About_Us{
+        .img{
+            width: 156px;
+            height: 40px;
+            background-size: cover;
+        }
+    }
+}
 //---------------------------------------------------------PRODUCT---------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .product{
     .g-product{
         background-image: url('../../img/skils_background.jpg');
@@ -119,8 +216,58 @@ margin:180px 100px;
             }
     }
 }
-
+//---------------------------------------------PRODUCT   MEDIA SCREEN-----------------------------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .skills{
+        margin: 100px 0 100px 80px;
+    }
+    .skill{
+        .skill-image{
+            .element{
+                width: 300px;
+            }
+            .element-2{
+                width: calc(300px * 0.75);
+            }
+            .new90{
+                width: calc(300px * 0.90);
+            }
+            .new65{
+                width: calc(300px * 0.65);
+            }
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .skills{
+        margin: 50px 0 50px 50px;
+        h3{
+            font-size: 22px;
+        }
+    }
+    .skill{
+        p{
+            margin: 15px 0 8px 0 ;
+            font-size: 12px;
+        }
+        .skill-image{
+            .element{
+                width: 250px;
+            }
+            .element-2{
+                width: calc(250px * 0.75);
+            }
+            .new90{
+                width: calc(250px * 0.90);
+            }
+            .new65{
+                width: calc(250px * 0.65);
+            }
+        }
+    }
+}
 //------------------------------------------------------------STATICTICS--------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .statistics{
     width: 100%;
     background-color: $color-main;
@@ -141,7 +288,7 @@ margin:180px 100px;
             margin-left: 15px;
             margin-top: -2px;
             p{
-                color: white;
+                color: $color-white;
                 margin-bottom: 5px;
                 text-transform: uppercase;
             }
@@ -151,7 +298,26 @@ margin:180px 100px;
         }
     }
 }
+//---------------------------------------------STATICTICS-MEDIA SCREEN--------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .statistics-conteiner{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .statistic{
+        margin-top: 15px;
+        .text{
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .statistics-conteiner{
+        padding: 30px 0px;
+    }
+}
 //---------------------------------------------------------IMAGE PRODUCT----------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .image-product{
 display: flex;
 flex-direction: column;
@@ -189,7 +355,7 @@ background: #f5f1f1;
         }
         .img-cont:hover{
             .background{
-                background: black;
+                background: $color-black;
                 opacity: 0.7;
                 .background-image{
                     display: block;
@@ -273,19 +439,51 @@ background: #f5f1f1;
     h2{
         padding-top: 30px;
     }
+}//-------------------------------------------IMAGE PRODUCT   MEDIA SCREEN--------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .image-product{ .images-container{.img-cont{
+        height: 250px;
+    }}}
 }
-
+@media screen and (max-width : $for-phone){
+    .image-product{
+        p{
+            padding: 10px 0 10px;
+            font-size: 14px;
+        }
+        .images-container{.img-cont{
+            height: 180px;
+        }}
+    }
+}
 //-------------------------------------------------------VIDEO-------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .video{
     display: flex;
     justify-content: center;
     }
+//---------------------------------------------VIDEO  MEDIA SCREEN-----------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .video{
+        .video-container{
+            height: 410px;
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .video{
+        .video-container{
+            height: 240px;
+        }
+    }
+}
 //--------------------------------------------------------------CONTAINER ICON--------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .icon{
     display: flex;
     justify-content: center;
     margin-top:-3px;
-    background: #eceaea;
+    background: $color-background;
     .container-icon{
         display: flex;
         justify-content: center;
@@ -345,7 +543,34 @@ background: #f5f1f1;
     }
 }
 
+//---------------------------------------------CONTAINER ICON   MEDIA SCREEN--------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .icon{
+        .container-icon{
+            .icon-element{
+                width: 49%;
+                height: 250px;
+            }
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .icon{
+        width: 100vw;
+        .container-icon{
+            .icon-element{
+                font-size: 14px;
+                width: 100%;
+                height: 180px;
+            }
+            .icon-element:first-child{
+                margin-top: 10px;
+            }
+        }
+    }
+}
 //----------------------------------------------------------------QUOTES-----------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .quotes{
     height: 300px;
     display: flex;
@@ -356,7 +581,7 @@ background: #f5f1f1;
     padding: 50px;
     padding-bottom: 20px;
     p{
-        color:white;
+        color:$color-white;
         font-weight: 500;
     }
     p:first-child{
@@ -378,7 +603,7 @@ background: #f5f1f1;
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: white;
+            background-color: $color-white;
             margin: 0 5px 0 5px;
             opacity: 0.8;
         }
@@ -390,7 +615,48 @@ background: #f5f1f1;
         }
     }
 }
+//-----------------------------------------------QUOTES     MEDIA SCREEN--------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .quotes{
+        height: 250px;
+        padding: 25px;
+        p{
+            font-size: 12px;
+        }
+        p:first-child{
+            font-size: 16px;
+            max-width: 80%;
+            margin-bottom: 15px;
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .quotes{
+        height: 250px;
+        p{
+            font-size: 10px;
+        }
+        p:first-child{
+            text-align: center;
+            font-size: 14px;
+            max-width: 80%;
+        }
+        .quotes-slider{
+            .slider{
+                width: 6px;
+                height: 6px;
+            }
+            .big-slider{
+                transition: 0.1s;
+               width: 7px;
+               height: 7px;
+               opacity: 1;
+            }
+        }
+    }
+}
 //-------------------------------------------LOGOS-----------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .logos{
     display: flex;
     justify-content: center;
@@ -419,12 +685,39 @@ background: #f5f1f1;
         }
     }
 }
-
+//---------------------------------------------LOGOS   MEDIA SCREEN-----------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .logos{
+        .logos-image{
+            margin: 30px;
+            .image{
+            width: 64px;
+            height: 36px;
+            background-size: contain;   
+            }
+        }
+    }
+}
+@media screen and (max-width : $for-phone-min) {
+    .logos{
+        .logos-image{
+            margin: 20px;
+            flex-wrap: wrap;
+            .image{
+             width: 64px;
+            height: 36px;
+            background-size: contain;
+            margin:0 20px 20px 5px;   
+            }
+        }
+    }
+}
 //---------------------------------------------------FORM----------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 .form{
     display: flex;
     justify-content: center;
-    background: #eceaea;
+    background: $color-background;
     form{
         display: flex;
         flex-direction: column;
@@ -437,7 +730,7 @@ background: #f5f1f1;
             margin-bottom: 40px;
             
         }
-        p{
+        .form-p{
             padding: 0 10% 30px 10%;
             text-align: center;
             color: #787878;
@@ -467,17 +760,82 @@ background: #f5f1f1;
             height: 100px;
             padding-top: 15px;
         }
-        .no-padding{
-            margin: auto;
-            p{
-                font-size: 14px;
-                padding: 0;
-                color: white;
+    }
+}
+//---------------------------------------------FORM     MEDIA SCREEN-----------------------------------------------
+@media screen and (max-width :$for-tablet){
+    .form{  
+        form{
+            padding: 40px;
+            h3{
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+            .form-p{
+                font-size: 12px;
+                padding-bottom: 20px;
+            }
+            .form-container{
+                flex-direction: column;
+                width: 99%;
+                .name-email{
+                    height: 28px;
+                    margin-right: 0;
+                    margin-left: -2%;
+                }
+                .email{
+                    margin-top: 15px;
+                }
+            }
+            .title{
+                height: 28px;
+                margin-top: 15px;
+            }
+            .coment{
+                height: 70px;
+            }
+            .form-btn{
+                font-size: 12px;
+            }  
+        }
+    }
+}
+@media screen and (max-width : $for-phone){
+    .form{  
+        form{
+            padding: 40px;
+            h3{
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+            .form-p{
+                font-size: 12px;
+                padding-bottom: 20px;
+            }
+            .form-container{
+                flex-direction: column;
+                width: 99%;
+                .name-email{
+                    height: 28px;
+                    margin-right: 0;
+                    margin-left: -2%;
+                }
+                .email{
+                    margin-top: 15px;
+                }
+            }
+            .title{
+                height: 28px;
+                margin-top: 15px;
+            }
+            .coment{
+                height: 70px;
             }
         }
     }
 }
 //------------------------------------------------------------FOOTER------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 footer{
     background: #141414;
     color: #bcbcbc;
@@ -538,188 +896,8 @@ footer{
         }
     }
 }
-
-@media screen and (max-width : 425px) {
-
-}
-
-//------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------------------------
-//---------------------------------------------Media screen width = 768px-----------------------------------------------------------------
-
-@media screen and (max-width : 768px){
-//------------------------------------------Header---------------------------------------------------------------
-    header{
-        background-size: initial;
-        padding-bottom: 40px;
-    }
-    .header-menu{
-        top: 0;
-        position: fixed;
-        display: none;
-        width: 100%;
-        z-index: 2;
-        opacity: 0.9;
-        li {
-            display: flex;
-            justify-content: center;
-            background-color: black;
-            margin: -1px;
-            padding: 10px;
-            a {
-            color : #ebebeb;
-            }
-        }
-    }
-    .wrapper {
-        justify-content: center;
-        .header-title{
-            display: flex;
-            align-items: center;
-        }
-    }
-    .container {
-        display: flex;
-        justify-content: flex-end;
-        .burger{
-            width: 100%;
-            height: 30px;
-            position: fixed;
-            z-index: 3;
-            background: none;
-            margin-bottom: 0;
-            i{
-                display: block;
-                padding-bottom: 0;
-                margin-left: 95%;
-                color : white;
-                font-size: 30px;
-            }
-        }
-    }
-    .container{
-        .burger{
-            background: #141414; 
-            opacity: 0.4;
-        }
-    }
-    .header-menu{
-        .header-li{
-            padding-top: 30px;
-        }
-    }
-//---------------------------------------------------------PRODUCT---------------------------------------------------
-    .skills{
-        margin: 100px 0 100px 80px;
-    }
-    .skill{
-        .skill-image{
-            .element{
-                width: 300px;
-            }
-            .element-2{
-                width: calc(300px * 0.75);
-            }
-            .new90{
-                width: calc(300px * 0.90);
-            }
-            .new65{
-                width: calc(300px * 0.65);
-            }
-        }
-    }
-//------------------------------------------------------------STATICTICS--------------------------------------------
-    .statistics-conteiner{
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .statistic{
-        margin-top: 15px;
-        .text{
-            font-size: 14px;
-        }
-    }
-//---------------------------------------------------------IMAGE PRODUCT----------------------------------------------
-    .image-product{ .images-container{.img-cont{
-        height: 250px;
-    }}}
-//-------------------------------------------------------VIDEO-------------------------------------------------------
-    .video{
-        .video-container{
-            height: 410px;
-        }
-    }
-//--------------------------------------------------------------CONTAINER ICON--------------------------------------
-    .icon{
-        .container-icon{
-            .icon-element{
-                width: 49%;
-                height: 250px;
-            }
-        }
-    }
-//----------------------------------------------------------------QUOTES-----------------------------------------
-    .quotes{
-        height: 250px;
-        padding: 25px;
-        p{
-            font-size: 12px;
-        }
-        p:first-child{
-            font-size: 16px;
-            max-width: 80%;
-            margin-bottom: 15px;
-        }
-    }
-//-------------------------------------------LOGOS-----------------------------------------------------------
-    .logos{
-        .logos-image{
-            margin: 30px;
-            .image{
-            width: 64px;
-            height: 36px;
-            background-size: contain;   
-            }
-        }
-    }
-    //---------------------------------------------------FORM----------------------------------------------------------
-    .form{  
-        form{
-            padding: 40px;
-            h3{
-                font-size: 25px;
-                margin-bottom: 15px;
-            }
-            p{
-                font-size: 12px;
-                padding-bottom: 20px;
-            }
-            .form-container{
-                flex-direction: column;
-                width: 99%;
-                .name-email{
-                    height: 28px;
-                    margin-right: 0;
-                    margin-left: -2%;
-                }
-                .email{
-                    margin-top: 15px;
-                }
-            }
-            .title{
-                height: 28px;
-                margin-top: 15px;
-            }
-            .coment{
-                height: 70px;
-            }
-            .form-btn{
-                font-size: 12px;
-            }  
-        }
-    }
-//---------------------------------------------------------------FOOTER------------------------------------------
+//---------------------------------------------FOOTER    MEDIA SCREEN--------------------------------------------
+@media screen and (max-width :$for-tablet){
     footer{
         .footer-container{
             padding: 15px;
@@ -750,179 +928,7 @@ footer{
         }
     }
 }
-
-
-//------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------------------------
-//--------------------------------------Media screen width = 425px-----------------------------------------------------------------
-
-
-@media screen and (max-width : 425px){
-//-------------------------------------------------Header---------------------------------------------------------------
-    .wrapper {
-        margin: 120px 50px;
-    }
-    .header-title{
-        h1{
-            font-size: 30px;
-            span{
-                color: white;
-            }
-        }
-        p{
-            font-weight: 600;
-        }
-        .butt{
-            display: flex;
-            justify-content: center;
-            width: 120px;
-            border-radius: 5%;
-            p{
-                font-size: 12px
-            }
-        }
-    }
-    .container{
-        .burger{
-            i{
-                margin-left: 90%;
-            }
-        }
-    }
-//-----------------------------------------------About_Us--------------------------------------------------------
-    .About_Us{
-        .img{
-            width: 156px;
-            height: 40px;
-            background-size: cover;
-        }
-    }
-//---------------------------------------------------------PRODUCT---------------------------------------------------
-    .skills{
-        margin: 50px 0 50px 50px;
-        h3{
-            font-size: 22px;
-        }
-    }
-    .skill{
-        p{
-            margin: 15px 0 8px 0 ;
-            font-size: 12px;
-        }
-        .skill-image{
-            .element{
-                width: 250px;
-            }
-            .element-2{
-                width: calc(250px * 0.75);
-            }
-            .new90{
-                width: calc(250px * 0.90);
-            }
-            .new65{
-                width: calc(250px * 0.65);
-            }
-        }
-    }
-//------------------------------------------------------------STATICTICS--------------------------------------------
-    .statistics-conteiner{
-        padding: 30px 0px;
-    }
-//---------------------------------------------------------IMAGE PRODUCT----------------------------------------------
-    .image-product{
-        p{
-            padding: 10px 0 10px;
-            font-size: 14px;
-        }
-        .images-container{.img-cont{
-            height: 180px;
-        }}
-    }
-//-------------------------------------------------------VIDEO-------------------------------------------------------
-    .video{
-        .video-container{
-            height: 240px;
-        }
-    }
-//--------------------------------------------------------------CONTAINER ICON--------------------------------------
-    .icon{
-        width: 100vw;
-        .container-icon{
-            .icon-element{
-                font-size: 14px;
-                width: 100%;
-                height: 180px;
-            }
-            .icon-element:first-child{
-                margin-top: 10px;
-            }
-        }
-    }
-//----------------------------------------------------------------QUOTES-----------------------------------------
-    .quotes{
-        height: 250px;
-        p{
-            font-size: 10px;
-        }
-        p:first-child{
-            text-align: center;
-            font-size: 14px;
-            max-width: 80%;
-        }
-        .quotes-slider{
-            .slider{
-                width: 6px;
-                height: 6px;
-            }
-            .big-slider{
-                transition: 0.1s;
-               width: 7px;
-               height: 7px;
-               opacity: 1;
-            }
-        }
-
-    }
-    //---------------------------------------------------FORM----------------------------------------------------------
-    .form{  
-        form{
-            padding: 40px;
-            h3{
-                font-size: 25px;
-                margin-bottom: 15px;
-            }
-            p{
-                font-size: 12px;
-                padding-bottom: 20px;
-            }
-            .form-container{
-                flex-direction: column;
-                width: 99%;
-                .name-email{
-                    height: 28px;
-                    margin-right: 0;
-                    margin-left: -2%;
-                }
-                .email{
-                    margin-top: 15px;
-                }
-            }
-            .title{
-                height: 28px;
-                margin-top: 15px;
-            }
-            .coment{
-                height: 70px;
-            }
-            .no-padding{
-                p{
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-//---------------------------------------------------------------FOOTER------------------------------------------
+@media screen and (max-width : $for-phone){
     footer{
         .footer-container{
             padding: 10px;
@@ -958,26 +964,6 @@ footer{
                         padding: 3px;
                     }
                 }
-            }
-        }
-    }
-}
-
-//------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------MEDIA CREEN WIDRT = 375PX----------------------------------
-@media screen and (max-width : 375px) {
-//-------------------------------------------LOGOS-----------------------------------------------------------
-    .logos{
-        .logos-image{
-            margin: 20px;
-            flex-wrap: wrap;
-            .image{
-             width: 64px;
-            height: 36px;
-            background-size: contain;
-            margin:0 20px 20px 5px;   
             }
         }
     }
