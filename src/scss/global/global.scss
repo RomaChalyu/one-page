@@ -17,6 +17,7 @@ a{
     overflow: hidden;
    width: 180px;
 }
+
 .btn{
     height: 54px;
     background-color: $color-main;
@@ -65,7 +66,7 @@ a{
         margin-bottom: 20px;
     }
 }
-
+//---------------------------------------------animations----------------------------------------------------------
 @keyframes pulse {
     to{
         transform: scale(2);
@@ -107,7 +108,8 @@ a{
 }
 
 //-----------------------------------------Media screen-----------------------------------------------------
-@media screen and (max-width : 425px){
+//-----------------------------------------for-phone-----------------------------------------------------
+@media screen and (max-width : $for-phone){
     .Description_Site {
         h2{
             font-size: 25px;
@@ -118,6 +120,10 @@ a{
         }
     }
     .butt{
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        border-radius: 5%;
         .btn{
             width: 120px;
             height: 36px;
